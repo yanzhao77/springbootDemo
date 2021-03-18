@@ -18,5 +18,5 @@ import java.util.Map;
 public interface UserDao {
     List<User> getAll(@Param("content") Map map);
 
-    String deleteById(@Param("content")Integer id);
+    void delById(Integer id);
 }

@@ -28,8 +28,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String deleteById(Integer id) {
-        userDao.deleteById(id);
-        return "success";
+    public void delById(Integer id) {
+        userDao.delById(id);
+
     }
 }

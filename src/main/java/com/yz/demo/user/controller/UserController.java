@@ -1,9 +1,7 @@
 package com.yz.demo.user.controller;
 
-import com.yz.demo.user.dao.UserDao;
 import com.yz.demo.user.entity.User;
 import com.yz.demo.user.sercice.UserService;
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,7 +35,8 @@ public class UserController {
     }
 
     @RequestMapping("/delById")
-    public String deleteById(Integer id) {
-        return userService.deleteById(id);
+    public String delById(Integer id) {
+        userService.delById(id);
+        return "success";
     }
 }

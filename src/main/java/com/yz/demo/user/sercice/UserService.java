@@ -15,5 +15,5 @@ import java.util.Map;
 public interface UserService {
     List<User> getAll(Map map);
 
-    String deleteById(Integer id);
+    void delById(Integer id);
 }
