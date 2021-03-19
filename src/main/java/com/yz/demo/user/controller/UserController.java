@@ -3,8 +3,9 @@ package com.yz.demo.user.controller;
 import com.yz.demo.user.entity.User;
 import com.yz.demo.user.sercice.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 import java.util.Map;
@@ -17,7 +18,7 @@ import java.util.Map;
  * @Created by yan34177
  */
 //ResponseBoy + Controller
-@RestController
+@Controller
 @RequestMapping("/user")
 public class UserController {
 
@@ -29,6 +30,7 @@ public class UserController {
         return "hello world";
     }
 
+    @ResponseBody
     @RequestMapping("/getAll")
     public List<User> getAll(Map map) {
         return userService.getAll(map);
@@ -37,6 +39,6 @@ public class UserController {
     @RequestMapping("/delById")
     public String delById(Integer id) {
         userService.delById(id);
-        return "success";
+        return "redirect:/index.html";
     }
 }

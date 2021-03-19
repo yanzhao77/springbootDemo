@@ -11,11 +11,12 @@ $.post({
                 '            <td>'+data[i].createTime+'</td>\n' +
                 '            <td>'+data[i].stratus+'</td>\n' +
                 '            <td>\n' +
-                '                <a href="#" class="btn btn-danger"></a>\n' +
+                '                <a href="user/delById?id='+data[i].id+'" class="btn btn-danger"></a>\n' +
                 '                <a href="#" class="btn btn-success"></a>\n' +
                 '            </td>\n' +
                 '        </tr>';
             console.log(text);
+            var aa="q"+"q";
             var obj=$(".pool");
             obj.append(text);
         }
